@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ReactNode } from 'react';
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './Theme.js';
@@ -7,7 +8,11 @@ import Container from '@mui/material/Container';
 import CustomFooter from './CustomFooter';
 import Box from '@mui/material/Box';
 
-export default function Template({ children }) {
+interface MyComponentProps {
+    children: ReactNode;
+  }
+
+export default function Template({ children } : MyComponentProps) {
     return (
         <ThemeProvider theme={theme}>
             <ResponsiveAppBar></ResponsiveAppBar>

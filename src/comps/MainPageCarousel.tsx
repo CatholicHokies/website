@@ -22,7 +22,7 @@ class MainPageCarousel extends Component {
                     {images_for_carousel.map((image) => {
                         return (
                             <Box key={image} height="40vh">
-                                <img src={image} fill alt={image} />
+                                <img src={image} alt={image} />
                             </Box>
                         )
                     }

@@ -21,7 +21,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="fixed">
-      <Container maxWidth="100vw">
+      <Container>
         <Toolbar sx={{display: "flex", justifyContent: "space-between"}}>
           <SmartNavigator></SmartNavigator>
           <Typography>CCM at VT</Typography>

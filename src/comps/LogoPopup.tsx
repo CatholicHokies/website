@@ -13,6 +13,8 @@ interface MyComponentProps {
     children: ReactNode;
   }
 
+type Visibility = 'visible' | 'hidden';
+
 export default function LogoPopup({children} : MyComponentProps ) {
     const [shown, setShown] = useState(true);
     const [css, setCss] = useState("hidden");
@@ -39,7 +41,7 @@ export default function LogoPopup({children} : MyComponentProps ) {
                     <Typography>CCM at VT</Typography>
                 </Box>
             </Box>}
-            {<div style={{visibility: css}}>{children}</div>}
+            {<div style={{visibility: css as Visibility}}>{children}</div>}
         </div>
     )
 }

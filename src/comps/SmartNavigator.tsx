@@ -4,12 +4,10 @@ import Link from 'next/link';
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MenuIcon from '@mui/icons-material/Menu';
-import IconButton from '@mui/material/IconButton';
+import TemporaryDrawer from "./Drawer"
+import SimpleAccordian from './SingleLinkAccordian';
+import SimpleLinkMenu from './SimpleLinkMenu'
 
 // This component is designed to be a smart navigation bar
 // when in mobile mode. It will display a hamburger menu
@@ -23,47 +21,26 @@ const hrefs = ['/', '/service', '/community', '/calendar', '/staff', '/support',
 
 export default function SmartNavigator() {
 
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
     return (
         <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
             {/* When the browser is small, give me a dropdown with links */}
             <Box sx={{ display: { xs: "block", md: "none" } }}>
-                <IconButton 
-                id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-                sx={{color: "white"}}>
-                    <MenuIcon></MenuIcon>
-                </IconButton>
-                <Menu
-                    id="basic-menu"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    MenuListProps={{
-                        'aria-labelledby': 'basic-button',
-                    }}
-                >
+                <TemporaryDrawer>
                     {pages.map((page, index) => (
-                        <MenuItem component={Link} key={index} href={hrefs[index]} onClick={handleClose}>{page}</MenuItem>
+                        <SimpleAccordian key={index} title={page}
+                        hrefs={["/test"]} 
+                        names={["test"]}
+                        ></SimpleAccordian>
                     ))}
-                </Menu>    
+                </TemporaryDrawer>
+                
+
             </Box>
             {/* When the browser is big enough, show the whole menu */}
             <Box sx={{ display: { xs: "none", md: "block" } }}>
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                     {pages.map((page, index) => (
-                        <Button key={index} component={Link} href={hrefs[index]} sx={{ color: "white" }}>{page}</Button>
+                            <SimpleLinkMenu key={index} title={page}></SimpleLinkMenu>
                     ))}
                 </Box>
             </Box>

@@ -32,7 +32,7 @@ export default function LogoPopup({children} : MyComponentProps ) {
             { shown &&  <Box className = "logoBox">
                 <Box className = "logo" sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                     <Image
-                        src="/CCM.svg"
+                        src="./CCM.svg"
                         alt="CCM logo"
                         width={400}
                         height={400}

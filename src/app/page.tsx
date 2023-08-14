@@ -15,7 +15,7 @@ export default function Home() {
     <LogoPopup>
       <PageTemplate>
         <MainPageCarousel></MainPageCarousel>
-        <ImageWithChildren src="/images/house.jpg">
+        <ImageWithChildren src="./images/house.jpg">
           <Typography className="background_white" color="black">Welcome Hokies</Typography>
           <Typography className="background_white" color="black">Catholic Campus Ministry</Typography>
           <Typography className="background_white" color="black">Whether you are a new parent, a returning alumni, or a member of our community, we are excited to meet you and help you to feel at home. Stay up to date and ge connected by joining our newsletter!</Typography>

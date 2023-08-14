@@ -1,5 +1,5 @@
 import './globals.css'
-import React, { useState } from 'react'
+import React, { useState, ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import CustomFooter from '@/comps/CustomFooter'
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
   description: 'Catholic Campus Ministry',
 }
 
-export default function RootLayout({children} : React.ReactNode) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
         <body className={inter.className}>

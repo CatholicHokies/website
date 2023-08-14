@@ -14,8 +14,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from '@mui/material';
 
 
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
-
 export default function TemporaryDrawer({ children }: React.ReactNode) {
     const [state, setState] = React.useState(false);
 

@@ -17,12 +17,12 @@ const images_for_carousel = ["./images/adoration1.jpg",
 class MainPageCarousel extends Component {
     render() {
         return (
-            <Box className="carouselClipper">
+            <Box>
                 <Carousel autoPlay showStatus={false} emulateTouch infiniteLoop showThumbs={false}>
                     {images_for_carousel.map((image) => {
                         return (
-                            <Box key={image} height="40vh">
-                                <Image src={image} alt={image} width={500} height = {500} />
+                            <Box className="carouselClipper" key={image}>
+                                <Image src={image} alt={image} width={1000} height = {500} />
                             </Box>
                         )
                     }

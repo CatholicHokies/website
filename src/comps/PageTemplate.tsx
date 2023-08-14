@@ -25,8 +25,8 @@ export default function Template({ children } : MyComponentProps) {
                     {children}
                 </Box>
                 {/* Display an image in the background */}
-                <Box sx={{position : "static"}}>
-                    <Image alt = "background" src="/images/Procession4.jpg" width = {1000} height = {1000} style={{objectFit : "cover", position : "fixed", top : 0, left : 0, zIndex : -1}}></Image>
+                <Box sx={{position : "static", display: "flex", justifyContent: "center", alilgnItems: "center"}}>
+                    <Image alt = "background" src="/images/Procession4.jpg" width = {1000} height = {1000} style={{objectFit : "cover", position : "fixed", top : 0, zIndex : -1}}></Image>
                 </Box>
 
             </Container>

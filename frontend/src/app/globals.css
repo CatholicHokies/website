@@ -1,0 +1,85 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/*  Logo Pop In Animation */
+
+@keyframes logo-pop-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* No margin for body */
+body {
+  margin: 0;
+}
+
+.logoBox
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.logo {
+  animation: logo-pop-in 1s ease-in-out;
+}
+
+/* Clips the carousel to a set height with flexbox */
+.carouselClipper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 40vh;
+  overflow: hidden;
+}
+
+/* Make any item in an MUI box have a default margin */
+.smartMargin > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.smartPadding > * {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Div that has an image as it's backgroudn */
+
+.imageBox {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Give any text within this class a back background */
+.background_black {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+}
+
+/* Give any text within this class a white background */
+.background_white {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+}

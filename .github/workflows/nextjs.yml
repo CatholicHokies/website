@@ -48,6 +48,8 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: CD to correct directory
+        run: cd frontend
       - name: Setup Node
         uses: actions/setup-node@v3
         with:

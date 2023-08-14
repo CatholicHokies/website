@@ -50,6 +50,10 @@ jobs:
           fi
       - name: CD to correct directory
         run: cd frontend
+      - name: Check pwd
+        run: pwd
+      - name: Check ls
+        run: ls  
       - name: Setup Node
         uses: actions/setup-node@v3
         with:

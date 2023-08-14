@@ -3,7 +3,7 @@ FROM node:19.3.0-alpine
 # Create app directory
 WORKDIR /frontend
 
-COPY frontend .
+COPY . .
 
 RUN npm i
 

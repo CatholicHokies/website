@@ -3,11 +3,7 @@ services:
   web:
     build: .
     volumes:
-      - ./frontend/src:/frontend/src
-      - ./frontend/public:/frontend/public
-      - ./frontend/package.json:/frontend/package.json
-      - ./frontend/package-lock.json:/frontend/package-lock.json
-      - ./frontend/ThemeConfig.js:/frontend/ThemeConfig.js
+      - ./src:/frontend/src
     ports:
       - "3000:3000"
     command: npm run dev

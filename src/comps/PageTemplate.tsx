@@ -8,6 +8,8 @@ import Container from '@mui/material/Container';
 import CustomFooter from './CustomFooter';
 import Box from '@mui/material/Box';
 
+import Image from 'next/image'
+
 interface MyComponentProps {
     children: ReactNode;
   }
@@ -24,7 +26,7 @@ export default function Template({ children } : MyComponentProps) {
                 </Box>
                 {/* Display an image in the background */}
                 <Box sx={{position : "static"}}>
-                    <img src="/images/Procession4.jpg" style={{width : "100%", height : "100%", objectFit : "cover", position : "fixed", top : 0, left : 0, zIndex : -1}}></img>
+                    <Image alt = "background" src="/images/Procession4.jpg" width = {1000} height = {1000} style={{objectFit : "cover", position : "fixed", top : 0, left : 0, zIndex : -1}}></Image>
                 </Box>
 
             </Container>

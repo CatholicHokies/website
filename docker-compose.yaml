@@ -4,6 +4,8 @@ services:
     build: .
     volumes:
       - ./src:/frontend/src
+      - ./package.json:/frontend/package.json
+      - ./package-lock.json:/frontend/package-lock.json
     ports:
       - "3000:3000"
     command: npm run dev

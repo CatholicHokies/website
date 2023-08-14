@@ -4,6 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image'
 import Box from '@mui/material/Box';
 
+import process from 'process';
+
 const images_for_carousel = ["/images/adoration1.jpg", 
                             "/images/bonding.jpg",
                             "/images/Football.jpg",
@@ -22,7 +24,7 @@ class MainPageCarousel extends Component {
                     {images_for_carousel.map((image) => {
                         return (
                             <Box key={image} height="40vh">
-                                <Image src={image} alt={image} width={500} height = {500} />
+                                <Image src={process.env.PUBLIC_URL + image} alt={image} width={500} height = {500} />
                             </Box>
                         )
                     }

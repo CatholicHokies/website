@@ -9,6 +9,8 @@ RUN npm i
 
 EXPOSE 3000
 
+ENV PUBLIC_URL=http://localhost:3000
+
 # RUN npm run build
 
 # CMD ["npm", "run", "start"]

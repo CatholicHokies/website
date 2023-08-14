@@ -34,8 +34,8 @@ export default function LogoPopup({children} : MyComponentProps ) {
                     <Image
                         src="./CCM.svg"
                         alt="CCM logo"
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                         priority
                     />
                     <Typography>CCM at VT</Typography>

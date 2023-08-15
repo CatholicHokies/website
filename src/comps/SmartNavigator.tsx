@@ -5,7 +5,7 @@ import Link from 'next/link';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import TemporaryDrawer from "./Drawer"
+import {TemporaryDrawer} from "./Drawer"
 import SimpleAccordian from './SingleLinkAccordian';
 import SimpleLinkMenu from './SimpleLinkMenu'
 
@@ -33,8 +33,6 @@ export default function SmartNavigator() {
                         ></SimpleAccordian>
                     ))}
                 </TemporaryDrawer>
-                
-
             </Box>
             {/* When the browser is big enough, show the whole menu */}
             <Box sx={{ display: { xs: "none", md: "block" } }}>
